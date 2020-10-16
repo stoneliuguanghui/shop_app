@@ -1,0 +1,7 @@
+<% provide(:title, @user.name) %>
+<h1>
+<%= gravatar_for @user %>
+<%= @user.name %></br>
+<p>New user? <%= link_to "退出", signout_path,method:"delete" %></p>
+
+</h1>

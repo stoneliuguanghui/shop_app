@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Olds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @olds.each do |old| %>
+      <tr>
+        <td><%= link_to 'Show', old %></td>
+        <td><%= link_to 'Edit', edit_old_path(old) %></td>
+        <td><%= link_to 'Destroy', old, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Old', new_old_path %>

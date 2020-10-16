@@ -1,0 +1,2 @@
+class Old < ApplicationRecord
+end

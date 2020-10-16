@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ShopApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body id="store">
+
+    <div id="banner">
+        <%= image_tag("logo.png")%>
+        <%= @page_title || "Pragmatic Bookshelf"%>
+    </div>
+    <div id="columns">
+        <div id="side">
+            <div id="cart">
+                <%=hidden_div_if(@cart.line_items.empty?,:id=>"cart") do%>
+                <%=render @cart%>
+                <%end%>
+            </div>
+            <a href="">Home</a></br>
+            <a href="">Home</a></br>
+            <a href="">Home</a></br>
+            <a href="">Home</a></br>
+        </div>
+        <div id="main">
+            <%=yield%>
+        </div>
+    </div>
+</body>
+
+</html>
